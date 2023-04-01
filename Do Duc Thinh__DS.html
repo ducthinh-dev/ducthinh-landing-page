@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Đỗ Đức Thịnh</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="808456d1-f477-494b-a577-6739ef64a03e" class="page serif"><header><h1 class="page-title">Đỗ Đức Thịnh</h1></header><div class="page-body"><h1 id="5ba09534-b240-401e-b945-2a834eaa13eb" class=""><strong><em>Data Scientist Intern </em></strong></h1><blockquote id="67b5b6f4-dd18-460e-a119-8b57dcec1534" class="">As a final-year IT student, I am passionate about data science and aspire to pursue a career in this field. My goal is to use my coding skills and tools to provide data-driven solutions that help businesses make better decisions. I am particularly interested in the IT, retail, finance, and sports industries, as each sector faces unique challenges that can be addressed through data-driven solutions. I believe that data science can optimize operations, improve customer satisfaction, and increase profitability by revealing insights that are not immediately apparent. I am committed to enhancing my technical knowledge and skills to lead teams towards success.</blockquote><div><h1 id="082e0a4d-0812-4c5b-b4ec-f8e86acca4b7" class="block-color-blue_background">Contact information</h1><p id="2eb415a9-539b-4420-a7a2-a74a468b47e9" class="">Thu Duc, Ho Chi Minh City, Viet Nam</p><p id="8e318b31-944b-4501-b8f9-c41adc86f32c" class="">dothinh.contactme@gmail.com</p><p id="0471b146-07bc-4453-bd60-2f6d284dabef" class="">(+84) 96 984 4385</p><p id="94ee0bc8-5c8f-4154-81b4-904d367f74b4" class=""><a href="https://www.linkedin.com/in/doducthinh/" target="_blank">Linkedin</a> — <a href="https://github.com/ducthinh-dev" target="_blank">Github</a> — <a href="https://leetcode.com/doducthihh/" target="_blank">LeetCode</a></p><hr id="ed8e273d-0aa1-44ad-acc5-3d791debee6b"/></div><h1 id="99492b24-3b86-435e-b941-33146006d14a" class="block-color-blue_background">Skills</h1><h2 id="8b0dfd94-df29-4976-93b1-03d68f38d469" class="block-color-gray_background">Technology</h2><h3 id="9544df73-fac0-469e-b2c2-e07ca9fc284f" class="">Python </h3><p id="6da6b44e-9352-4550-8a72-5981258d4fd6" class=""><em>Familiar</em></p><p id="50231e8d-c5c9-4bdb-8af3-dce2d66f53ac" class="">Since my first year at university, I have been proficient in Python, which I use in Jupyter notebooks for data analysis and manipulation. I have experience working with popular data manipulation libraries like NumPy and Pandas, and data visualization libraries like Matplotlib and Seaborn to create visuals that are easy to understand. I have also been learning machine learning libraries like scikit-learn and TensorFlow to broaden my knowledge and skills in data science, as it allows for the development of predictive models for informed business decisions. My Python journey has been enriching, and I am excited to explore more libraries and technologies to enhance my skills further.</p><h3 id="97aa6f2b-e2e4-4afa-9944-822b1172797b" class="">SQL</h3><p id="fb04409b-4c9d-4197-a067-8ee51c134ddb" class=""><em>Decent</em></p><p id="fd3ae615-d4c0-4339-bbda-ffd5f8a12308" class="">I learned SQL during my second year of university in a database course. I&#x27;m now proficient in SQL and can write intermediate-level queries. I&#x27;ve worked with Microsoft SQL Server and MySQL, which has given me a strong understanding of how to optimize queries. I enjoy using SQL to gain insights from data and am excited to continue exploring new ways to apply it in data science.</p><h3 id="1d4d5454-f70b-43c9-a6ac-3fe816d91245" class="">Git</h3><p id="d015de4a-680d-4c8e-85de-8674a137dfec" class=""><em>Beginner</em></p><p id="3f906bac-2e6f-47ea-955e-f5afb6ec3ff2" class="">Currently, my understanding of Git is limited. Despite this, I&#x27;m taking steps to learn more. I&#x27;ve recently enrolled in an online course on Git basics which has given me a better understanding of the fundamentals. I&#x27;ve also been practicing my skills by working on small projects where I&#x27;ve become more comfortable with basic commands like pull, push, and clone. Although there&#x27;s still a lot to learn, I&#x27;m confident that my commitment and hard work will help me become proficient in Git in no time.</p><h2 id="850b7817-ab3e-4622-8d71-daea4e1e4b6f" class="block-color-gray_background">Languages</h2><h3 id="134db909-83d2-4272-b43a-16214bcd6a37" class=""><strong>English</strong></h3><p id="4a539af7-7f3e-4f7f-8b5a-5d9f183bbb46" class=""><em>Fluent</em></p><ul id="832664a0-bda9-4056-b36c-4e079c0c60d6" class="bulleted-list"><li style="list-style-type:disc">KET <mark class="highlight-gray">(</mark><mark class="highlight-gray"><em>2014</em></mark><mark class="highlight-gray">)</mark></li></ul><ul id="2834408e-9ee5-4482-8be7-e51fd0f945e4" class="bulleted-list"><li style="list-style-type:disc">IELTS 6.0 <mark class="highlight-gray"><em>(expired in 2020)</em></mark></li></ul><p id="54161695-1939-4a37-8401-2a44055d1d0a" class="">I have a strong understanding of English documentation and communication skills. I am confident in my ability to adapt to any workplace setting, and I have effectively collaborated with professionals from various backgrounds and cultures. As a technology professional, I understand the importance of strong language skills for building relationships and staying up-to-date with industry trends. I am committed to continually improving my language skills and working with diverse individuals to drive innovation and success in the technology field.</p><h3 id="e32fd757-4b7b-4947-93b0-8ed40ef98705" class="">Japanese</h3><p id="e1354eec-12ba-4ccc-bb66-0d8c56b32c33" class=""><em>Nearly intermediate</em></p><p id="0032c64a-c92e-46da-b507-50f28b513462" class="">Over the past three years, I&#x27;ve been studying Japanese to enhance my communication skills and deepen my understanding of the culture. Every day, I develop a greater appreciation for the language, especially the unique grammar and writing system. My goal is to take the Japanese-Language Proficiency Test (N3) in July 2023, and I am confident that my hard work will pay off and I will achieve a passing score.</p><hr id="f1981077-5fe0-45cb-b7bb-7ccb37f7cce0"/><h1 id="56be5564-23af-4e9c-a50f-7b718f130601" class="block-color-blue_background">Education</h1><h2 id="70c2a070-1428-4200-b9f4-0dfc203fedbd" class=""><strong>Bachelor&#x27;s Degree in Information Technology</strong></h2><p id="1575a407-42da-43bf-8d0a-ae06d916c813" class=""><em>University of Information Technology - Vietnam National University Ho Chi Minh city</em></p><p id="15e77bca-68e1-4ca5-a5ef-da938d08d2fb" class=""><em>Undergraduate: 2019 - present (expect graduation in 2023)</em></p><p id="4ea5becd-6587-4fc9-a3d3-30ab7cb632ff" class="">In my first two years of school, I learned a variety of subjects including calculus, statistics, computer architecture, networking, and software development. From my third year onwards, I focused on web development and data science. During this time, my interest in data science grew, and I have been working hard to improve my skills in this field. Along the way, I have also developed my critical thinking and problem-solving abilities, which are crucial for success in the rapidly growing field of data science. Overall, I am confident in my ability to excel in this exciting and competitive field.</p><hr id="0b76bd96-2e1b-4f6d-b694-028eaf2215ae"/><h1 id="ad0851e3-b213-4c1a-88eb-60351a4c36ad" class="block-color-blue_background">Courses and certificates</h1><ul id="29496b43-2726-4fc8-bd5b-f52621f13d30" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/9AFUTQERPXW6">IBM Data Science</a> <mark class="highlight-gray"><em>(July 2022)</em></mark></li></ul><ul id="3ca2b343-2a78-4377-9596-b0588b522a4b" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/TFQMSPSNR98D">IBM Machine Learning</a> <mark class="highlight-gray"><em>(October 2022)</em></mark></li></ul><p id="796fedd3-e66f-4f38-9dd9-0a66572d624f" class="">During my IBM Data Science and Machine Learning courses, I gained a broad understanding of the field. I consider myself at an intermediate level, with room for growth.</p><p id="97ab314b-bd5d-405f-9dbd-ecbbb057fbff" class="">The courses provided valuable insights into data science and machine learning, including data analysis and the role of machine learning in extracting insights from raw data. I gained practical experience with popular libraries like NumPy, Pandas, Matplotlib, Seaborn, scikit-learn, and TensorFlow.</p><p id="36b1f4d1-66b4-4a15-96ea-309347be0948" class="">Overall, the courses gave me a strong foundation in data science and machine learning. I&#x27;m excited to keep exploring new technologies and libraries to improve my skills and become a valuable member of any data science team.</p><hr id="08684fac-7b2a-4d7a-bd98-7d9681cc2e7f"/><h1 id="b3ad76a5-9c07-4833-b087-496839d86065" class="block-color-blue_background">Projects</h1><h3 id="c751234d-7ac4-4c90-b878-cf1af6e915ba" class="">Personal projects</h3><p id="335310fd-4d16-4581-bae3-8dfe83a8beb3" class=""><strong>Data analysis &amp; machine learning</strong></p><ul id="6acc8dcd-f199-44aa-b216-23baed9d3952" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.notion.so/Smoke-detection-984815de51544b448532612adb781b73">Smoke detection</a></li></ul><ul id="2592d2db-0ec6-464c-9236-06a49deeab25" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.notion.so/Customer-segment-5dc9519a551640738c2fb632d13f14bf">Customer segment</a><p id="89caf4a5-97b3-4fa7-ab3c-61722b4f6a8d" class="">With IBM certificates, I have gained valuable insights into data science and machine learning. These projects have helped me develop a keen understanding of data analysis and the critical role of machine learning in extracting insights from raw data. Although not numerous, these projects have helped me take my first steps into these advanced fields, identify areas for improvement, and commit to continuous growth and development.</p></li></ul><h3 id="9df63a39-df13-4466-8564-7456b1fe590b" class="">School projects</h3><p id="c6a421dc-af32-47fd-8dab-d3581401998c" class=""><strong>Data analysis &amp; machine learning</strong></p><ul id="dc569137-f239-4303-b08e-1cfe4c29df6b" class="bulleted-list"><li style="list-style-type:disc"><a href="https://colab.research.google.com/drive/168TFSNLPXK6OQuHCJt8Xn8uqm8yMHj0Z?usp=sharing"><strong><em>CIFAR10 Images classification using custom VGGNet model </em></strong></a><p id="9773f023-a749-4a21-8e97-d7719a4ac979" class="">For my final project in the AI class, I created a custom model based on the VGGNet model, but with only nine layers. My model achieved higher accuracy than the baseline CNN model, improving from 0.49 to 0.78. This project provided me with a strong foundation in neural networks and a glimpse of the ideas of machine learning and artificial intelligence. It also helped me identify areas for improvement, such as deep learning, convolutional neural networks, and more advanced machine learning algorithms.</p><p id="29f9162c-aae8-46e9-bf59-6b5842ebc135" class="">I am dedicated to constantly improving my skills in the field of data science and machine learning. This is crucial for being a valuable member of any team, as these fields are constantly changing and require professionals who are knowledgeable about the latest tools and techniques. I am enthusiastic about exploring new libraries and technologies to enhance my abilities and take on more challenging projects.</p></li></ul><ul id="b8ea80e7-8bd3-4c95-9d47-fd984ad8c463" class="bulleted-list"><li style="list-style-type:disc"><em><strong>Books recommender for web-based application </strong></em><mark class="highlight-gray"><em>(ongoing)</em></mark><p id="72cb416b-3f0a-4a94-b318-131683205ec0" class="">As part of my Bachelor&#x27;s degree in Information Technology, I&#x27;m building a web-based book recommender that uses information retrieval models to generate personalized recommendations based on a user&#x27;s reading history, preferences, and other relevant factors. By applying data science techniques such as natural language processing and machine learning, I aim to create a robust system that helps users discover new books they&#x27;ll enjoy.</p><p id="32729f7f-5cef-41ec-b366-40b595594a4d" class="">This project has the potential to revolutionize book recommendations and I&#x27;m excited to develop my data science and software engineering skills in the process. Expected completion date: June 2023.</p><hr id="07d3e2e6-d0b8-4508-90ba-11cf6a22ad41"/><p id="b905f113-8a5a-44fd-98f0-b8449dc4d77e" class="">
+</p></li></ul></div></article></body></html>
